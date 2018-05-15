@@ -13,8 +13,7 @@ RDEPENDS_${PN} = "\
     docker \
     kernel-dev \
     kernel-devsrc \
-    links \
-    links-x11 \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'links-x11', 'links', d)} \
     tsocks \
     \
     packagegroup-samples \
