@@ -1,0 +1,31 @@
+From 34da1283f4c4e6a713398c5ccc35dfbe56dabdc5 Mon Sep 17 00:00:00 2001
+From: Jiang Lu <lu.jiang@windriver.com>
+Date: Thu, 17 May 2018 11:51:13 +0800
+Subject: [PATCH] samba:enable HAVE_LIBSYSTEMD_DAEMON for systemd
+
+Enable HAVE_LIBSYSTEMD_DAEMON for systemd in samba.
+
+Signed-off-by: Jiang Lu <lu.jiang@windriver.com>
+---
+ lib/util/wscript_configure | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/lib/util/wscript_configure b/lib/util/wscript_configure
+index a1e5801..685240e 100644
+--- a/lib/util/wscript_configure
++++ b/lib/util/wscript_configure
+@@ -110,8 +110,9 @@ conf.SET_TARGET_TYPE('systemd-journal', 'EMPTY')
+ conf.SET_TARGET_TYPE('systemd', 'EMPTY')
+ 
+ if Options.options.enable_systemd != False:
+-    conf.CHECK_CFG(package='libsystemd-daemon', args='--cflags --libs',
+-                   msg='Checking for libsystemd-daemon')
++    conf.DEFINE('HAVE_LIBSYSTEMD_DAEMON', '1')
++    conf.CHECK_CFG(package='libsystemd', args='--cflags --libs',
++                   msg='Checking for libsystemd')
+     if not conf.CHECK_LIB('systemd-daemon', shlib=True):
+         conf.CHECK_LIB('systemd', shlib=True)
+ 
+-- 
+2.7.4
+
