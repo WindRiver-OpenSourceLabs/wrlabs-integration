@@ -1,4 +1,4 @@
-part /boot/efi --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_efi.otaimg"  --ondisk mmcblk --fstype=vfat --label esp --active --align 4
-part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_boot.otaimg" --ondisk mmcblk --fstype=ext4 --label boot --align 4
-part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64.otaimg" --ondisk mmcblk --fstype=ext4 --label root --align 4
+part /boot/efi --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_efi.otaimg"  --ondisk mmcblk --fstype=vfat --label otaefi --active --align 4
+part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_boot.otaimg" --ondisk mmcblk --fstype=ext4 --label otaboot --align 4
+part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64.otaimg" --ondisk mmcblk --fstype=ext4 --label otaroot --align 4
 part /var --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_var.otaimg"  --ondisk mmcblk --fstype=ext4 --label fluxdata --active --align 4
