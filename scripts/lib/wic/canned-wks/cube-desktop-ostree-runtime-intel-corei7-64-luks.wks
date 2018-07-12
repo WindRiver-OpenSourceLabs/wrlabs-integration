@@ -1,4 +1,4 @@
 part / --source rawcopy --sourceparams="file=cube-desktop-ostree-runtime-intel-corei7-64_efi.otaimg"  --ondisk mmcblk --fstype=vfat --label otaefi --active --align 4
 part / --source rawcopy --sourceparams="file=cube-desktop-ostree-runtime-intel-corei7-64_boot.otaimg" --ondisk mmcblk --fstype=ext4 --label otaboot --align 4
-part / --source rawcopy --sourceparams="file=cube-desktop-ostree-runtime-intel-corei7-64.otaimg" --ondisk mmcblk --fstype=ext4 --label luks_otaroot --align 4
-part / --source rawcopy --sourceparams="file=cube-desktop-ostree-runtime-intel-corei7-64_var.otaimg"  --ondisk mmcblk --fstype=ext4 --label luks_fluxdata --active --align 4
+part / --source rawcopy --sourceparams="file=cube-desktop-ostree-runtime-intel-corei7-64.otaimg" --ondisk mmcblk --fstype=ext4 --label luksotaroot --align 4
+part / --source rawcopy --sourceparams="file=cube-desktop-ostree-runtime-intel-corei7-64_var.otaimg"  --ondisk mmcblk --fstype=ext4 --label luksfluxdata --active --align 4
