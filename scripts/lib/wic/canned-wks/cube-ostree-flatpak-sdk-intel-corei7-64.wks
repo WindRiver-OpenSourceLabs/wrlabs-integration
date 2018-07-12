@@ -1,3 +1,0 @@
-part /boot/efi --source rawcopy --sourceparams="file=cube-desktop-ostree-runtime-intel-corei7-64_efi.otaimg"  --ondisk mmcblk --fstype=vfat --label boot --active --align 4
-part / --source rawcopy --sourceparams="file=cube-desktop-ostree-sdk-intel-corei7-64.otaimg" --ondisk mmcblk --fstype=ext4 --label root --align 4
-part /var/lib/flatpak --ondisk mmcblk --fstype=ext4 --label fluxdata --align 4 --size 16
