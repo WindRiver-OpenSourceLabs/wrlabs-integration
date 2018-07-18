@@ -3,4 +3,4 @@ part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7
 part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64.otaimg" --ondisk sda --fstype=ext4 --label otaroot --align 4 --type logical
 part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_boot.otaimg" --ondisk sda --fstype=ext4 --label otaboot_b --align 4 --type logical
 part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64.otaimg" --ondisk sda --fstype=ext4 --label otaroot_b --align 4 --type logical
-part /var --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_var.otaimg"  --ondisk sda --fstype=ext4 --label fluxdata --active --align 4
+part /var --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_var.otaimg"  --ondisk sda --fstype=ext4 --label fluxdata --align 4

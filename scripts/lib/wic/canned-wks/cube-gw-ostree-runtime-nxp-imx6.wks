@@ -5,4 +5,4 @@ part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-nxp-imx6_boo
 part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-nxp-imx6.otaimg" --ondisk mmcblk --fstype=ext4 --label otaroot --align 4 --type logical
 part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-nxp-imx6_boot.otaimg" --ondisk mmcblk --fstype=ext4 --label otaboot_b --align 4 --type logical
 part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-nxp-imx6.otaimg" --ondisk mmcblk --fstype=ext4 --label otaroot_b --align 4 --type logical
-part /var --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-nxp-imx6_var.otaimg"  --ondisk mmcblk --fstype=ext4 --label fluxdata --active --align 4
+part /var --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-nxp-imx6_var.otaimg"  --ondisk mmcblk --fstype=ext4 --label fluxdata --align 4

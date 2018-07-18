@@ -1,6 +1,6 @@
-part / --source rootfs --rootfs-dir=/boot/efi  --ondisk sda --fstype=vfat --label otaefi_hd --active --align 4
-part / --source rootfs --rootfs-dir=/boot/ --ondisk sda --fstype=ext4 --label otaboot_hd --align 4 --type logical
+part /boot/efi --source rootfs --rootfs-dir=/boot/efi  --ondisk sda --fstype=vfat --label otaefi_hd --active --align 4
+part /boot --source rootfs --rootfs-dir=/boot/ --ondisk sda --fstype=ext4 --label otaboot_hd --align 4 --type logical
 part / --source rootfs --rootfs-dir=/sysroot --ondisk sda --fstype=ext4 --label otaroot_hd --align 4 --type logical
-part / --source rootfs --rootfs-dir=/boot/ --ondisk sda --fstype=ext4 --label otaboot_hd_b --align 4 --type logical
+part /boot --source rootfs --rootfs-dir=/boot/ --ondisk sda --fstype=ext4 --label otaboot_hd_b --align 4 --type logical
 part / --source rootfs --rootfs-dir=/sysroot --ondisk sda --fstype=ext4 --label otaroot_hd_b --align 4 --type logical
-part / --source rootfs --rootfs-dir=/ostree/deploy/pulsar-linux/var  --ondisk sda --fstype=ext4 --label fluxdata_hd --active --align 4
+part /var --source rootfs --rootfs-dir=/ostree/deploy/pulsar-linux/var  --ondisk sda --fstype=ext4 --label fluxdata_hd --align 4

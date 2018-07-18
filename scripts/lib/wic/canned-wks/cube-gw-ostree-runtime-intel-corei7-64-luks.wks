@@ -1,6 +1,6 @@
-part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_efi.otaimg"  --ondisk sda --fstype=vfat --label otaefi --active --align 4
-part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_boot.otaimg" --ondisk sda --fstype=ext4 --label otaboot --align 4 --type logical
+part /boot/efi --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_efi.otaimg"  --ondisk sda --fstype=vfat --label otaefi --active --align 4
+part /boot --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_boot.otaimg" --ondisk sda --fstype=ext4 --label otaboot --align 4 --type logical
 part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64.otaimg" --ondisk sda --fstype=ext4 --label luksotaroot --align 4 --type logical
-part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_boot.otaimg" --ondisk sda --fstype=ext4 --label otaboot_b --align 4 --type logical
+part /boot --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_boot.otaimg" --ondisk sda --fstype=ext4 --label otaboot_b --align 4 --type logical
 part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64.otaimg" --ondisk sda --fstype=ext4 --label luksotaroot_b --align 4 --type logical
-part / --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_var.otaimg"  --ondisk sda --fstype=ext4 --label luksfluxdata --active --align 4
+part /var --source rawcopy --sourceparams="file=cube-gw-ostree-runtime-intel-corei7-64_var.otaimg"  --ondisk sda --fstype=ext4 --label luksfluxdata --align 4
