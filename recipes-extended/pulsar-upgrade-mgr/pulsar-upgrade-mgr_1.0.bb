@@ -9,6 +9,7 @@ S = "${WORKDIR}"
 SRC_URI = "file://COPYING \
            file://pulsar-upgrade-postinst.sh \
            file://pulsar-upgrade-postrm.sh \
+           file://pulsar_upgrade_${TARGET_ARCH}.sh \
           "
 
 FILES_${PN} += "/usr/bin/pulsar-upgrade-postinst.sh \
@@ -19,6 +20,9 @@ do_install() {
 	install -d ${D}/usr/bin
 	install -m 0755 ${S}/pulsar-upgrade-postinst.sh ${D}/usr/bin
 	install -m 0755 ${S}/pulsar-upgrade-postrm.sh ${D}/usr/bin
+	if [ "${TARGET_ARCH}" = "x86_64" ]; then
+		install -m 0755 ${S}/pulsar_upgrade_${TARGET_ARCH}.sh ${D}/usr/bin/pulsar_upgrade.sh
+	fi
 }
 
 pkg_postinst_${PN} () {
